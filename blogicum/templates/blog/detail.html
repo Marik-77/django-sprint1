@@ -1,7 +1,7 @@
- {% extends "base.html" %}
+{% extends "base.html" %}
 
  {% block title %}
-    <title>{{ content.location }}. {{ content.date }}</title>
+    <title>{{ post.location }}. {{ post.date }}</title>
  {% endblock %}
 
 
@@ -11,17 +11,17 @@
         <article>
           <ul>
             <li>
-              Место: {{ content.location }}             
+              Место: {{ post.location }}             
             </li>
             <li>
-              Дата: {{ content.date }}
+              Дата: {{ post.date }}
             </li>
             <li>
-              Категория: <a href="not-my-day">{{ content.category }}</a>
+              Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
             </li>
           </ul>         
           <p>
-            {{ content.text }}
+            {{ post.text }}
           </p>          
         </article>                   
       </div>
