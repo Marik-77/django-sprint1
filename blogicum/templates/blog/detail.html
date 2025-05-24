@@ -1,0 +1,29 @@
+ {% extends "base.html" %}
+
+ {% block title %}
+    <title>{{ content.location }}. {{ content.date }}</title>
+ {% endblock %}
+
+
+ {% block content %}
+    <main>
+      <div class="container py-5">
+        <article>
+          <ul>
+            <li>
+              Место: {{ content.location }}             
+            </li>
+            <li>
+              Дата: {{ content.date }}
+            </li>
+            <li>
+              Категория: <a href="not-my-day">{{ content.category }}</a>
+            </li>
+          </ul>         
+          <p>
+            {{ content.text }}
+          </p>          
+        </article>                   
+      </div>
+    </main>
+ {% endblock %}
