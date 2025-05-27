@@ -55,8 +55,11 @@ def index(request):
 
 def post_detail(request, id):
     template = 'blog/detail.html'
-    POSTS_BY_ID = {index: item for item in posts
-        for index in range(len(posts))}
+    POSTS_BY_ID = {
+        index: item
+        for item in posts
+        for index in range(len(posts))
+    }
     if id not in POSTS_BY_ID.keys():
         raise Http404("Страница не найдена")
     context = {'post': posts[id]}
