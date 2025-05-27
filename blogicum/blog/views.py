@@ -68,9 +68,6 @@ def post_detail(request, id):
 
 def category_posts(request, category_slug):
     template = 'blog/category.html'
-    CATEGORY = {item['category'] for item in posts}
-    if category_slug not in CATEGORY:
-        raise Http404("Страница не найдена")
     context = {
         'category_slug': category_slug,
     }
