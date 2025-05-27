@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 
  {% block title %}
-    <title>{{ post.location }}. {{ post.date }}</title>
+    {{ post.location }}. {{ post.date }}
  {% endblock %}
 
 
  {% block content %}
-    <main>
-      <div class="container py-5">
         <article>
           <ul>
             <li>
@@ -21,9 +19,7 @@
             </li>
           </ul>         
           <p>
-            {{ post.text }}
+            {{ post.text|linebreaksbr }}
           </p>          
         </article>                   
-      </div>
-    </main>
  {% endblock %}

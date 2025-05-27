@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 
  {% block title %}
-    <title>Лента записей</title>
+    Лента записей
  {% endblock %}
 
 
  {% block content %}
-    <main>
-      <div class="container py-5">
         <h1>Лента записей</h1>                        
         <hr>
         {% for post in posts %}
@@ -33,8 +31,5 @@
           <hr>
         {% endif %}  
         {% endfor %}         
-      </div>
-    </main>
-
  {% endblock %}
 
