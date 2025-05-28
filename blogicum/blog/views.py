@@ -45,10 +45,10 @@ posts = [
 ]
 
 POSTS_BY_ID = {
-        index: item
-        for item in posts
-        for index in range(len(posts))
-    }
+    index: item
+    for item in posts
+    for index in range(len(posts))
+}
 
 
 def index(request):
