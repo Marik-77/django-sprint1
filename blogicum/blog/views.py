@@ -45,7 +45,7 @@ posts = [
 ]
 
 POSTS_BY_ID = {
-    posts.index(item): item
+    item.get('id'): item
     for item in posts
 }
 
